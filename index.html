@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Solutions | Innovative Controls</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<nav class="tabbar" aria-label="Solar product views">
+  <div class="tabbar-in">
+    <div class="brand">Innovative Controls <span>| Solar Solutions</span></div>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" id="t-panels" aria-selected="true" aria-controls="v-panels" data-v="panels">Solar Panels</button>
+      <button class="tab" role="tab" id="t-inverters" aria-selected="false" aria-controls="v-inverters" data-v="inverters" tabindex="-1">Solar Inverters</button>
+    </div>
+  </div>
+</nav>
+<div class="view on" id="v-panels" role="tabpanel" aria-labelledby="t-panels"><div class="loading">Loading 3D viewer...</div></div>
+<div class="view" id="v-inverters" role="tabpanel" aria-labelledby="t-inverters"><div class="loading">Loading 3D viewer...</div></div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

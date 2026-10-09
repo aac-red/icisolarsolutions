@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Panels | Innovative Controls</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/panels.css">
+</head>
+<body>
+
+<header class="hero">
+  <div id="stage" aria-label="Interactive 3D solar panel viewer. Drag to rotate."></div>
+  <div class="nogl" id="nogl">Solar Solutions by Innovative Controls</div>
+  <div id="labels"></div>
+  <div class="hero-copy"><div class="wrap">
+    <h1><span>Powered by nature.</span><span>Driven by innovation.</span></h1>
+    <p>Complete solar systems with panels, inverters and installation support for homes, businesses and industry, with Dyness and Solis.</p>
+  </div></div>
+  <div class="hint" id="hint">Drag to rotate</div>
+
+  <div class="ctl">
+    <div class="tabs" id="tabs">
+      <button type="button" data-m="inside" aria-pressed="true">Inside a panel</button>
+      <button type="button" data-m="scale" aria-pressed="false">Scale it up</button>
+      <button type="button" data-m="sun" aria-pressed="false">Follow the sun</button>
+    </div>
+    <div class="row" id="row-inside">
+      <label for="expl"><span>Pull the layers apart</span></label>
+      <input id="expl" type="range" min="0" max="100" value="0">
+      <span class="note">Glass, solar cells, backsheet and frame work together in every panel.</span>
+    </div>
+    <div class="row" id="row-scale" hidden>
+      <div class="seg" id="seg">
+        <button type="button" data-t="0" aria-pressed="false">Home</button>
+        <button type="button" data-t="1" aria-pressed="true">Business</button>
+        <button type="button" data-t="2" aria-pressed="false">Industrial</button>
+      </div>
+      <div class="cap"><span id="kw">15-20 kW</span><span id="who">Small businesses</span></div>
+      <span class="note" id="tdesc"></span>
+    </div>
+    <div class="row" id="row-sun" hidden>
+      <label for="sun"><span>Move the sun</span><span id="time">12:00 PM</span></label>
+      <input id="sun" type="range" min="0" max="100" value="48">
+      <div class="meter" aria-hidden="true"><i id="out"></i></div>
+      <span class="note">Illustrative relative output: <b id="pct">100%</b>. Watch the light sweep across the glass.</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="lead">Sized for what you run</h2>
+    <p class="sub">From a family home to an industrial plant, we design the system around your daily power needs.</p>
+    <div class="tiers">
+      <article class="tier"><h3>5-12<small>kW</small></h3><div class="who">Homes</div><p>Designed for medium to larger homes with higher energy consumption.</p></article>
+      <article class="tier"><h3>15-20<small>kW</small></h3><div class="who">Small businesses</div><p>A great solution for small businesses, offices, retail stores, and commercial establishments.</p></article>
+      <article class="tier"><h3>&gt;50<small>kW</small></h3><div class="who">Large facilities</div><p>Engineered for large commercial facilities, warehouses, schools, and industrial applications with significant daily power requirements.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2 class="lead">Products &amp; Services</h2>
+    <ul class="svc">
+      <li>Residential Rooftop Solar</li>
+      <li>Industrial and Commercial Solar</li>
+      <li>Agricultural Solar Projects</li>
+      <li>Installation Support</li>
+      <li>Hybrid &amp; Battery Solar Solutions</li>
+      <li>Ground Mounted Project Solar</li>
+    </ul>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2 class="lead">Why choose our solar?</h2>
+    <div class="why-grid">
+      <div>Low maintenance, long-term performance</div>
+      <div>Scalable for any application</div>
+      <div>Support energy resilience</div>
+      <div>Sustainable power with reduced emissions</div>
+      <div>Built to withstand weather</div>
+      <div>Your roof can become your own power plant!</div>
+    </div>
+    <p class="why-note">With expert engineering, quality components and tailored system designs, we help you get the most from solar energy, one ray at a time.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="lead">Complete business support</h2>
+    <p class="sub">From the first conversation to the final documents, we stay with your project.</p>
+    <ol class="steps">
+      <li>Consultation &amp; Recommendation</li>
+      <li>Site Visit &amp; Survey</li>
+      <li>System Designing</li>
+      <li>Complete Quotation</li>
+      <li>Installation Coordination</li>
+      <li>Project Execution Support</li>
+      <li>Customer Follow-Ups</li>
+      <li>Documentation Assistance</li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Request a solar quote</h2>
+    <p>Tell us about your site and your power needs. We will recommend the right system.</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+639199990748">Call sales: +63 919 999 0748</a>
+      <a class="btn ghost" href="https://www.innovativecontrols.com.ph/contactourteam" target="_top">Contact our team</a>
+    </div>
+  </div>
+</section>
+
+<div class="foot">Innovative Controls, Inc. &bull; innovation &bull; smart solution</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/panels-3d.js"></script>
+<script src="js/frame-resize.js"></script>
+</body>
+</html>

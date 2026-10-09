@@ -1,0 +1,51 @@
+/* Solar Inverters page styles (page-specific; shared rules are in base.css) */
+/* hero */
+.hero{position:relative;overflow:hidden;background:#fff;padding-top:var(--stage-h)}
+.hero-copy h1{font-size:clamp(40px,7vw,78px);max-width:660px}
+.hero-copy p{max-width:450px;margin-top:14px;font-weight:500;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.seg button{flex:1 1 auto;padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:700;font-size:15px}
+.seg button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange)}
+.row label{display:flex;justify-content:space-between;font-weight:700;font-size:15px}
+.row input[type=range]{width:100%;margin:6px 0 2px;accent-color:var(--orange);height:26px}
+.note{display:block;margin-top:6px;color:var(--muted);font-size:13.5px;line-height:1.4}
+
+/* content */
+.catalog{background:var(--orange-l)}
+.cat-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.cat-tabs button{padding:10px 20px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);font-weight:700;font-size:16px}
+.cat-tabs button:hover{background:var(--orange-m)}
+.cat-tabs button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.spot{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;margin-bottom:30px}
+.spot-stage{position:relative;height:460px;border-radius:20px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.spot-stage .glow{position:absolute;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(245,138,43,.35),transparent 65%);filter:blur(20px)}
+.spot-stage img{position:relative;max-width:78%;max-height:84%;object-fit:contain;filter:drop-shadow(0 22px 22px rgba(43,43,43,.28))}
+.spot-stage img.float{animation:flt 5s ease-in-out infinite}
+@keyframes flt{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.eyebrow{font-weight:700;color:var(--orange-d);font-size:15px}
+.spot-info h3{font-size:clamp(26px,3.6vw,40px);margin:6px 0 8px;word-break:break-word}
+.kw{display:inline-block;background:var(--orange);color:var(--ink);border-radius:999px;padding:6px 16px;font-weight:700;margin:6px 0 14px}
+.spot-info p{max-width:420px;color:var(--muted);margin-bottom:22px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px;border:2px solid var(--ink)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.thumb{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.thumb[hidden]{display:none}
+.thumb:hover{border-color:var(--orange)}
+.thumb[aria-current="true"]{border-color:var(--orange);box-shadow:0 0 0 3px var(--orange-m)}
+.thumb img{height:110px;width:100%;object-fit:contain}
+.thumb span{font-size:12.5px;font-weight:700;line-height:1.25;word-break:break-word}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat{background:#fff;border:1px solid var(--line);border-top:6px solid var(--orange);border-radius:12px;padding:24px 22px}
+.feat h3{font-size:28px;margin-bottom:8px}
+.feat p{color:var(--muted);font-size:16px}
+.how{background:var(--orange)}
+.flow{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.flow li{counter-increment:s;border-left:4px solid var(--ink);padding:4px 0 4px 16px;font-weight:700;font-size:19px}
+.flow li:before{content:counter(s);display:block;font-size:40px;line-height:1}
+.cta{background:#fff;text-align:center;padding-bottom:60px}
+.cta .btns{justify-content:center}
+
+@media(max-width:820px){:root{--stage-h:560px}.spot{grid-template-columns:1fr}.spot-stage{height:380px}.feats,.flow{grid-template-columns:1fr}}
+@media(max-width:560px){section{padding:54px 0}.hero-copy{top:22px}:root{--stage-h:520px}.hint{top:auto;bottom:auto;right:12px;top:calc(var(--stage-h) - 48px)}.seg button{font-size:13px;padding:8px 6px}}
+@media(prefers-reduced-motion:reduce){.spot-stage img.float{animation:none}}

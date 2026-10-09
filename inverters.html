@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Inverters | Innovative Controls</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/inverters.css">
+</head>
+<body>
+
+<header class="hero">
+  <div id="stage" aria-label="Interactive 3D solar inverter. Drag to rotate."></div>
+  <div class="nogl" id="nogl">Solar Inverters by Innovative Controls</div>
+  <div id="labels"></div>
+  <div class="hero-copy"><div class="wrap">
+    <h1><span>Solar inverters.</span><span>Where sunlight becomes power.</span></h1>
+    <p>DC in from your panels, AC out to your building. Explore the Solis inverter range below, part of our complete solar solutions.</p>
+  </div></div>
+  <div class="hint" id="hint">Drag to rotate</div>
+
+  <div class="ctl">
+    <div class="seg" id="chips">
+      <button type="button" data-k="single" aria-pressed="true">Single phase</button>
+      <button type="button" data-k="hybrid1" aria-pressed="false">Hybrid 1-phase</button>
+      <button type="button" data-k="hybrid3" aria-pressed="false">Hybrid 3-phase</button>
+      <button type="button" data-k="three" aria-pressed="false">Three phase</button>
+      <button type="button" data-k="utility" aria-pressed="false">Utility scale</button>
+    </div>
+    <div class="row">
+      <label for="open"><span>Open it up</span></label>
+      <input id="open" type="range" min="0" max="100" value="0">
+    </div>
+    <div class="row">
+      <label for="sol"><span>Sunlight on the panels</span><span id="pct">100%</span></label>
+      <input id="sol" type="range" min="0" max="100" value="100">
+    </div>
+    <span class="note" id="note"></span>
+  </div>
+</header>
+
+<section class="catalog">
+  <div class="wrap">
+    <h2 class="lead">Solis inverter range</h2>
+    <p class="sub">Pick a category, then a model. Move your cursor over the photo to tilt it.</p>
+    <div class="cat-tabs" id="cat-tabs">
+      <button type="button" data-c="single" aria-pressed="true">Single Phase PV</button>
+      <button type="button" data-c="three" aria-pressed="false">Three Phase PV</button>
+      <button type="button" data-c="storage" aria-pressed="false">Energy Storage</button>
+      <button type="button" data-c="utility" aria-pressed="false">Utility Scale</button>
+    </div>
+    <div class="spot">
+      <div class="spot-stage" id="spot-stage"><div class="glow"></div><img id="spot-img" alt="Selected Solis inverter"></div>
+      <div class="spot-info">
+        <div class="eyebrow" id="spot-cat"></div>
+        <h3 id="spot-name"></h3>
+        <div class="kw" id="spot-kw"></div>
+        <p>Ask our team which model fits your site, your power needs and your system design.</p>
+        <div class="btns"><a class="btn primary" href="tel:+639199990748">Call sales: +63 919 999 0748</a><a class="btn ghost" href="https://www.innovativecontrols.com.ph/contactourteam" target="_top">Contact our team</a></div>
+      </div>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="lead">What our inverters do</h2>
+    <p class="sub">The inverter is the brain of your solar system. We size and match it to your panels during system design.</p>
+    <div class="feats">
+      <article class="feat"><h3>DC to AC power</h3><p>Converts the DC electricity from your solar panels into AC power your building can use.</p></article>
+      <article class="feat"><h3>Grid-tied systems</h3><p>Connects your solar system to your building's electrical supply to cut the power you draw.</p></article>
+      <article class="feat"><h3>Hybrid with batteries</h3><p>Hybrid inverters work with battery storage to support energy resilience when you need it.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2 class="lead">How the power flows</h2>
+    <p class="sub" style="color:var(--ink)">Three simple steps from roof to wall socket.</p>
+    <ol class="flow">
+      <li>Your solar panels turn sunlight into DC electricity.</li>
+      <li>The inverter converts that DC into AC power.</li>
+      <li>Your building uses the AC power. Hybrid systems can also charge a battery.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ask about solar inverters</h2>
+    <p>Tell us about your site and your power needs. We will recommend the right inverter and system.</p>
+    <div class="btns"><a class="btn primary" href="tel:+639199990748">Call sales: +63 919 999 0748</a><a class="btn ghost" href="https://www.innovativecontrols.com.ph/contactourteam" target="_top">Contact our team</a></div>
+  </div>
+</section>
+
+<div class="foot">Innovative Controls, Inc. &bull; innovation &bull; smart solution</div>
+
+<script src="js/inverter-data.js"></script>
+<script src="js/inverters-catalog.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/inverters-3d.js"></script>
+<script src="js/frame-resize.js"></script>
+</body>
+</html>
